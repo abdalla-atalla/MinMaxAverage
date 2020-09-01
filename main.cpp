@@ -12,56 +12,62 @@
 
 using namespace std;
 
-
-float formatNumber(double d) {
+float formatNumber(double d)
+{
     return std::ceil(d * 100.00) / 100.00;
 }
 
-void showMaxMin(list<double> l) {
+void showMaxMin(list<double> l)
+{
     double maxNumber = l.front();
     double minNumber = l.front();
-    
+
     list<double>::iterator it;
-    for (it = l.begin(); it != l.end(); ++it) {
-        if (*it > maxNumber) {
+    for (it = l.begin(); it != l.end(); ++it)
+    {
+        if (*it > maxNumber)
+        {
             maxNumber = *it;
         }
-        
-        if (*it < minNumber) {
+
+        if (*it < minNumber)
+        {
             minNumber = *it;
         }
     }
     cout << "Maximum number is: " << maxNumber << endl;
     cout << "Minimum number is: " << minNumber << endl;
-    cout << "Average is: " << formatNumber((maxNumber + minNumber)/2) << endl;
+    cout << "Average is: " << formatNumber((maxNumber + minNumber) / 2) << endl;
     cout << endl;
 }
 
-int main() {
-    
+int main()
+{
+
     list<double> myList;
-    
+
     double number = -1;
     string existYN;
-    
-    
-    do {
+
+    do
+    {
         cout << "Please enter your number to the list: ";
-        
-        if (cin >> number) {
+
+        if (cin >> number)
+        {
             myList.push_back(formatNumber(number));
-        } else {
+        }
+        else
+        {
             cout << "Invalid input! Please enter a valid number!" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            
         }
-        cout << "Are you done? (Y/N) " ;
+        cout << "Are you done? (Y/N) ";
         cin >> existYN;
-            
+
     } while (existYN != "Y" and existYN != "y");
-    
-    
+
     showMaxMin(myList);
 
     myList.clear();
