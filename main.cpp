@@ -1,7 +1,5 @@
 //
 //  main.cpp
-//  ExtraCredit
-//  This program is written by Abdalla Atalla and finished on 11/ /19. This program asks the user to input numbers from the keyboard and then it will find the average of the maximum and minimum values from that set of numeric values. The program will then continue to run until the user decides he wants to quit.
 //  Created by Abdalla Atalla on 11/7/19.
 //  Copyright © 2019 Abdalla Atalla. All rights reserved.
 //
